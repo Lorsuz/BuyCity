@@ -1,0 +1,240 @@
+// sass -w sass/index.scss:css/index.css
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+
+@mixin center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+
+
+* {
+	// outline: 1px solid #ccc;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Merriweather;
+}
+
+body {
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	background: url('../../static/images/41346.jpg') center;
+	background-size: cover;
+	backdrop-filter: blur(1px);
+}
+
+div#songs {
+	position: absolute;
+	margin-bottom: auto;
+	display: flex;
+	right: 10px;
+	z-index: 5;
+
+	div {
+		margin: 10px;
+		cursor: pointer;
+
+		&.is-on {
+			background: url('../../static/images/bloque.png') no-repeat center;
+			background-size: 100%;
+		}
+
+		img {
+			width: 30px;
+			height: 30px;
+			margin: 10px;
+
+		}
+	}
+}
+
+section {
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	// outline: 1px solid;
+	background-color: rgba(255, 255, 255, 0);
+	@include center;
+
+	&#home {
+		top: 0;
+		left: 0;
+		right: 100vw;
+		bottom: 100vh;
+
+		div {
+			display: flex;
+			flex-direction: column;
+			top: 0;
+			left: 0;
+			width: 50%;
+			min-width: 400px;
+			max-width: 500px;
+			// border-radius: 20px;
+			// background: rgba(114, 112, 112, 0.538);
+			// border: 3px solid rgba(41, 41, 41, 0.663);
+
+			h1 {
+				font-size: 4rem;
+				letter-spacing: 2px;
+				text-align: center;
+				scroll-margin-bottom: 20px;
+				cursor: default;
+
+
+				&::after {
+					content: '';
+					background: black;
+					transition: 200ms ease-in-out;
+					width: 0px;
+					height: 3px;
+					display: block;
+					border-radius: 50px;
+					margin: 10px auto;
+				}
+
+				&:hover {
+					&::after {
+						width: 90%;
+					}
+				}
+
+				span {
+					color: green;
+					top: 0;
+					position: relative;
+					cursor: pointer;
+
+					&.animation {
+						animation: floatMoneyTittle 600ms ease-out 10 alternate;
+					}
+				}
+			}
+		}
+
+		button {
+			background: transparent;
+			margin: 15px auto;
+			width: 70%;
+			cursor: pointer;
+			padding: 13px;
+			border-radius: 50px;
+			font-size: 1.4rem;
+			font-weight: 500;
+			transition: 200ms;
+			background: rgba(255, 255, 255, 0.865);
+			border: 2px solid rgb(55, 55, 55);
+
+			&:hover {
+				letter-spacing: 2px;
+				background: rgb(234, 234, 234);
+			}
+		}
+
+		span {
+			color: rgb(48, 99, 56);
+			text-align: center;
+			margin: 10px;
+			cursor: default;
+		}
+	}
+
+	&#settings {
+		top: -100vh;
+	}
+
+	&#credits {
+		left: -100vw;
+	}
+
+	&#feedBack {
+		left: 100vw;
+	}
+
+	&#extra {
+		top: 100vh;
+
+	}
+}
+
+
+
+@keyframes floatMoneyTittle {
+	to {
+		top: -10px;
+	}
+}
+
+@keyframes goCenter {
+	to {
+		top: 0;
+		left: 0;
+		right: 100vw;
+		bottom: 100vh;
+	}
+}
+
+@keyframes goTop {
+	from {
+		top: 0;
+		left: 0;
+		right: 100vw;
+		bottom: 100vh;
+	}
+
+	to {
+		top: -100vh;
+	}
+}
+
+@keyframes goLeft {
+	from {
+		top: 0;
+		left: 0;
+		right: 100vw;
+		bottom: 100vh;
+	}
+
+	to {
+		left: -100vw;
+	}
+}
+
+@keyframes goRigth {
+	from {
+		top: 0;
+		left: 0;
+		right: 100vw;
+		bottom: 100vh;
+	}
+
+	to {
+		left: 100vw;
+	}
+}
+
+@keyframes goBottom {
+	from {
+		top: 0;
+		left: 0;
+		right: 100vw;
+		bottom: 100vh;
+	}
+
+	to {
+		top: 100vh;
+	}
+}
+
+@keyframes goGame {
+	from{
+		top: 100vh;
+	}
+	to{
+		top: 0;
+	}
+}
