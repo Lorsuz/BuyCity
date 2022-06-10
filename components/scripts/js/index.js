@@ -4,7 +4,7 @@ var soundtrack = document.getElementById( 'soundtrack' );
 var musicIsOn = false;
 music.addEventListener( 'click', soundtrackTurn );
 // soundtrack.play()
-soundtrack.volume = 0.1
+soundtrack.volume = 1
 // sound.addEventListener( 'click' );
 function soundtrackTurn () {
 	this.classList.toggle( 'is-on' );
@@ -16,7 +16,6 @@ function soundtrackTurn () {
 		musicIsOn = false;
 	}
 }
-
 
 var cipher = document.getElementById( 'cipher' );
 cipher.addEventListener( 'click', () => {
@@ -49,22 +48,27 @@ function appearScreens () {
 		id = turnButtonInSection( this.getAttribute( 'id' ) );
 		screen = document.getElementById( id );
 		screen.style.animation = 'goCenter 1s ease-out forwards';
-		home.style.animation = 'goBottom 1s ease-out';
-		console.log(screen)
+		home.style.animation = 'goBottom 1s ease-out forwards';
+		console.log( screen );
+
 	} else {
 		homeIsMain = true;
-		console.log(screen.getAttribute('id'))
-		if ( screen == settings ){
+		console.log( screen.getAttribute( 'id' ) );
+		if ( screen == settings ) {
 			screen.style.animation = 'goTop 1s ease-out';
-		}if ( screen == credits ){
+		} if ( screen == credits ) {
 			screen.style.animation = 'goLeft 1s ease-out';
-		}if ( screen == feedBack ){
+		} if ( screen == feedBack ) {
 			screen.style.animation = 'goRigth 1s ease-out';
-		}if ( screen == extra ){
+		} if ( screen == extra ) {
 			screen.style.animation = 'goBottom 1s ease-out';
 		}
-		home.style.animation = 'none';
-	}
+		setTimeout( () => {
+			home.style.animation = 'opacityChange 0.5s ease-in-out'
+			// alert('nao vai funcionar')
+		}, 300
+		)
+}
 }
 
 var start = document.getElementById( 'start' ).addEventListener( 'click', () => {
@@ -72,6 +76,6 @@ var start = document.getElementById( 'start' ).addEventListener( 'click', () => 
 	goGame()
 } );
 function goGame() {
-	window.location.href = 'components/scripts/php/game/public/index.php';
+	window.location.href = 'components/scripts/php/client/public/login.php';
 
 }
