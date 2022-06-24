@@ -1,17 +1,17 @@
 <?php
-echo !isset($_SESSION['fistLoad']);
-if (!isset($_SESSION['fistLoad']))
-{
-	$_SESSION["loggedin"] = $_SESSION['error_email'] = $_SESSION['error_password'] =	$_SESSION['email'] = $_SESSION['password'] = $_SESSION['error_login'] = null;
-	echo'ar';
-}
-// $_SESSION['loggedin']=true;
-	echo($_SESSION['loggedin']);
-	if ($_SESSION['loggedin'] == true)
-	{
-		header("location: ../../game/public/index.php");
+session_start();
+if (isset($_SESSION['loggedin'])) {
+	if ($_SESSION['loggedin'] == true) {
+		header("location: ../../game/public/menu-game.php");
 		exit;
 	}
+} else {
+	if ((!isset($_SESSION['fistLoad'])) || (isset($_GET['var']) && $_GET['var'] == 'reset')) {
+		$_SESSION['error_email'] = $_SESSION['error_password'] =	$_SESSION['email'] = $_SESSION['password'] = $_SESSION['error_login'] = null;
+
+	}
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +24,7 @@ if (!isset($_SESSION['fistLoad']))
 	<title>Document</title>
 </head>
 
-<body>
+<body id="login">
 	<form action="../private/login_user.php" method="POST">
 
 		<h2>Bem vindo de volta</h2>
@@ -51,7 +51,7 @@ if (!isset($_SESSION['fistLoad']))
 
 
 		<div id="footer">Não tem uma conta?
-			<a href="register.php">Cadastre-se</a>
+			<a href="register.php?var=reset">Cadastre-se</a>
 		</div>
 
 	</form>

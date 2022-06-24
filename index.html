@@ -2,67 +2,66 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<title>Banco imobiliario</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="components/custom/css/index.css">
-		<!-- <link rel="stylesheet" href="components/custom/css/design/login.css"> -->
+		<link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
+		<title>Sano - Landing Page</title>
 	</head>
 	<body>
-		<audio loop id="soundtrack" src="components/static/audios/Chopsticks - Text Me Records _ Jorge Hernandez.mp3"></audio>
-		<div id="songs">
-			<div id="music" class="is-on">
-				<img src="components/static/images/music.png" alt="">
+		<header>
+			<!-- menu -->
+			<nav id="nav">
+				<a href="components/scripts/php/game/public/menu-game.php"><img id="logo" src="components/static/images/logo.png" alt=""></a>
+				<a class="active" href="#">Home</a>
+				<a href="#">Planos</a>
+				<a href="#">Contato</a>
+				<a href="#">Sobre</a>
+				<a href="#">Desenvolvedores</a>
+				<a id="login" href="components/scripts/php/client/public/login.php">Entrar</a>
+			</nav>
+			<!-- outra coisa -->
+			<div id="geral">
+				<div id="div1">
+					<div id="tittle">
+						<h3>Role Playing Game</h3>
+						<h1>Mundo Sano</h1>
+					</div>
+					<div id="slider">
+						<div class="selected">
+							<p>Lorem ipsum dolor sit amet consectedgdtur adipisicing elit. Sed molestias natus veniam laborufgfm, iste quasi, saepe ea voluptatem illum ipsum, rem blanditfdgdiis quas perspiciatis similique ipsam. Doloremque podgssimus voluptatibus laudantium.
+							</p>
+						</div>
+						<div>
+							<p>Lordfgdem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationdgem facere placeat numquam quibusdam reprehenderit accusantium fugit laudantikdsfum hic tempore, earum nam iusto deserunt optio maiores ab voluptas ad illo? Et?</p>
+						</div>
+						<div>
+							<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis vero sed facilis cupiditate optio eos aspernatur ipsa consequuntur ex exercitationem placeat autem cumque, tenetur ad ducimus qui rerum voluptate! Nisi?</p>
+						</div>
+						<div>
+							<p>Lorem ipsdrgdrgum dolor sit amdgdet consectetur adipisicing elit. Neque dolorrgrdgrgdes nafdgdm expedita, facere mollitia non dolorum, itaque voluptrgeratem repudiandae fugit optio eveniet sed doloremque laborum esse ratione distirdgdrdnctio aliquam temporibus?</p>
+						</div>
+					</div>
+					<div id="acount">
+						<span>Olá, é sua primeira vez por aqui?</span>
+						<a href="components/scripts/php/client/public/register.php">Registre-se</a>
+					</div>
+				</div>
+				<div id="div2">
+					<div id="cllr">
+						<div></div>
+						<img src="components/static/images/tela_cllr.png" alt="">
+					</div>
+				</div>
 			</div>
-			<div id="sound" class="is-on">
-				<img src="components/static/images/sound.png" alt="">
-			</div>
-		</div>
-		<section id="home" class="appear-screen">
-			<div>
-				<h1>Buy<span id="cipher">$</span>City</h1>
-				<button id="start">Start Game</button>
-				<button id="buttonSettings" class="s">settings</button>
-				<button id="buttonCredits">Credits</button>
-				<button id="buttonFeedBack">FeedBack</button>
-				<span id="buttonExtra">Beta 1.35.2</span>
-			</div>
-		</section>
-		<section id="settings">
-			<div>
-				<button id="backHome1">Home</button>
-				<h1>Settings</h1>
-				<label for="">Number of players:</label>
-				<input type="number" value="4" min="2" max="4">
-				<label for="">Names: </label>
-				<input type="text">
-				<label for="">number of laps:</label>
-				<input type="number" value="10" min="5" max="25">
-				<label for=""></label>
-				<input type="text">
-				<label for=""></label>
-				<input type="text">
-			</div>
-		</section>
-		<section id="credits" class="disappear-screen">
-			<button id="backHome2">Home</button>
-			<div>
-				<h1>Credits</h1>
-				<p>ariellllll</p>
-			</div>
-		</section>
-		<section id="feedBack" class="disappear-screen">
-			<button id="backHome3">Home</button>
-			<h1>Are you enjoying the game?</h1>
-			<button>YES</button>
-			<button>NO</button>
-		</section>
-		<section id="extra" class="disappear-screen">
-			<button id="backHome4">Home</button>
-			<h1>Aextraaaaaaaaaaaaaaaaa?</h1>
-			<button>YES</button>
-			<button>NO</button>
-		</section>
+			<span id="version">version 10.3.9</span>
+		</header>
+		<main></main>
+		<footer>
+		</footer>
 		<script src="components/scripts/js/index.js"></script>
-		<!-- <script src="components/js/cidades.js"></script>
-	<script src="components/js/jogadores.js"></script> -->
 	</body>
 </html>

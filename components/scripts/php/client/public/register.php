@@ -1,10 +1,11 @@
 <?php session_start();
-// session_destroy();
-if (!isset($_SESSION['fistLoad']))
-{
+
+
+if ((!isset($_SESSION['fistLoad'])) || (isset($_GET['var']) && $_GET['var'] == 'reset')) {
 	$_SESSION['error_nickname'] = $_SESSION['error_email'] = $_SESSION['error_password'] = $_SESSION['error_passwordConfirme'] =	$_SESSION['nickname'] = $_SESSION['email'] = $_SESSION['password'] = $_SESSION['passwordConfirme'] = null;
+
 }
-// session_destroy();
+
 ?>
 
 <!DOCTYPE html>
@@ -48,7 +49,7 @@ if (!isset($_SESSION['fistLoad']))
 		<input class="retangle submit" type="submit" value="Entrar">
 
 		<div id="footer">Already have an account?
-			<a href="login.php">Log in</a>
+			<a href="login.php?var=reset">Log in</a>
 		</div>
 
 	</form>

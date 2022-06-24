@@ -1,5 +1,4 @@
 // sass -w sass/index.scss:css/index.css
-
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
 
 @mixin center {
@@ -45,7 +44,6 @@ div#songs {
 			width: 30px;
 			height: 30px;
 			margin: 10px;
-
 		}
 	}
 }
@@ -74,10 +72,10 @@ section {
 			width: 50%;
 			min-width: 400px;
 			max-width: 500px;
+
 			// border-radius: 20px;
 			// background: rgba(114, 112, 112, 0.538);
 			// border: 3px solid rgba(41, 41, 41, 0.663);
-
 			h1 {
 				font-size: 4rem;
 				letter-spacing: 2px;
@@ -149,18 +147,15 @@ section {
 	&#credits {
 		left: -100vw;
 	}
-	
+
 	&#feedBack {
 		left: 100vw;
 	}
 
 	&#extra {
 		top: 100vh;
-
 	}
 }
-
-
 
 @keyframes floatMoneyTittle {
 	to {
@@ -230,19 +225,21 @@ section {
 }
 
 @keyframes goGame {
-	from{
+	from {
 		top: 100vh;
 	}
-	to{
+
+	to {
 		top: 0;
 	}
 }
 
 @keyframes opacityChange {
-	from{
+	from {
 		opacity: 0;
 	}
-	to{
+
+	to {
 		opacity: 1;
 	}
 }
